@@ -151,11 +151,32 @@ class _HomeState extends State<Home> {
               ]),
             ),
           ),
-          Container(
-            width: width,
-            height: height,
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20),
             child: Center(
-              child: DashboardCard(text: ""),
+              child: GradientText(
+                "কেন Brainiac Lab-তে আস্থা রাখবে?",
+                textAlign: TextAlign.center,
+                style: GoogleFonts.aclonica(
+                  fontSize: 32,
+                  fontWeight: FontWeight.w400,
+                  textStyle: Theme.of(context).textTheme.bodySmall,
+                ),
+                colors: [Color(0xFFF6F6F7), Color(0xFF7E808F)],
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              top: height * .05,
+              // bottom: height * .05,
+            ),
+            child: Container(
+              width: width,
+              // height: height,
+              child: Center(
+                child: DashboardCard(text: ""),
+              ),
             ),
           ),
           if (Responsive.isDesktop(context)) Footer()
