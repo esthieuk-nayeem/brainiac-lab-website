@@ -1,5 +1,4 @@
 import 'package:brainiac_web/widgets/commonAppbar.dart';
-import 'package:brainiac_web/widgets/reviewCard.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
@@ -33,6 +32,7 @@ class _IeltsDetailsState extends State<IeltsDetails> {
     super.initState();
   }
 
+  @override
   Widget build(BuildContext context) {
     bool isMobile = false;
 
@@ -57,27 +57,27 @@ class _IeltsDetailsState extends State<IeltsDetails> {
                   fontWeight: FontWeight.w400,
                   textStyle: Theme.of(context).textTheme.bodySmall,
                 ),
-                colors: [Color(0xFFF6F6F7), Color(0xFF7E808F)],
+                colors: const [Color(0xFFF6F6F7), Color(0xFF7E808F)],
               ),
             ),
             Container(
               height: height - 100,
-              color: Color(0xFF0b1120),
+              color: const Color(0xFF0b1120),
               child: Stack(children: [
                 Positioned(
                     left: width * .5,
-                    child: Container(
+                    child: SizedBox(
                       width: width * .5 - 50,
                       // height: height,
                       child: Stack(children: [
                         Center(
                           child: AnimatedOpacity(
                             opacity: animate ? 1.0 : 0.0,
-                            duration: Duration(seconds: 2),
+                            duration: const Duration(seconds: 2),
                             curve: Curves.ease,
                             child: AnimatedPadding(
                               curve: Curves.ease,
-                              duration: Duration(seconds: 2),
+                              duration: const Duration(seconds: 2),
                               padding: EdgeInsets.only(
                                 left: animate ? 0.0 : 500.0,
                               ),
@@ -86,7 +86,7 @@ class _IeltsDetailsState extends State<IeltsDetails> {
                                   isMobile
                                       ? AnimatedPadding(
                                           curve: Curves.ease,
-                                          duration: Duration(seconds: 1),
+                                          duration: const Duration(seconds: 1),
                                           padding: EdgeInsets.only(
                                             left: animate ? 0.0 : 500.0,
                                           ),
@@ -99,7 +99,7 @@ class _IeltsDetailsState extends State<IeltsDetails> {
                                             ),
                                           ))
                                       : Container(),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 20,
                                   ),
                                   Text(
@@ -110,7 +110,7 @@ class _IeltsDetailsState extends State<IeltsDetails> {
                                         fontWeight: FontWeight.w300,
                                         fontSize: 23),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 35,
                                   ),
                                   Text(
@@ -121,7 +121,7 @@ class _IeltsDetailsState extends State<IeltsDetails> {
                                         fontWeight: FontWeight.w300,
                                         fontSize: 23),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 70,
                                   ),
                                   Text(
@@ -188,7 +188,7 @@ class _IeltsDetailsState extends State<IeltsDetails> {
                                         fontWeight: FontWeight.w400,
                                         fontSize: 23),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 25,
                                   ),
                                   Button(
@@ -205,7 +205,7 @@ class _IeltsDetailsState extends State<IeltsDetails> {
                     )),
                 AnimatedPositioned(
                     curve: Curves.ease,
-                    duration: Duration(seconds: 1),
+                    duration: const Duration(seconds: 1),
                     left: animate ? 10 : -300,
                     child: Image.asset(
                       alignment: Alignment.centerLeft,
@@ -260,7 +260,7 @@ class _IeltsDetailsState extends State<IeltsDetails> {
   }
 
   void startAnimate() async {
-    await Future.delayed(Duration(milliseconds: 200));
+    await Future.delayed(const Duration(milliseconds: 200));
     setState(() {
       animate = true;
     });

@@ -6,7 +6,7 @@ class NavbarButton extends StatelessWidget {
   final VoidCallback onPressed;
   final Color textColor;
 
-  NavbarButton({
+  const NavbarButton({super.key, 
     required this.text,
     required this.onPressed,
     this.textColor = Colors.white,
@@ -16,7 +16,7 @@ class NavbarButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
-            primary: Color(0xFF0b1120), onPrimary: Colors.white, elevation: 30),
+            foregroundColor: Colors.white, backgroundColor: const Color(0xFF0b1120), elevation: 30),
         onPressed: onPressed,
         child: Container(
           child: Text(

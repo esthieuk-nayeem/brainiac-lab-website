@@ -6,7 +6,7 @@ class Button extends StatelessWidget {
   final Color textColor;
   final width;
 
-  Button({
+  const Button({super.key, 
     required this.text,
     required this.onPressed,
     this.textColor = Colors.white,
@@ -19,7 +19,7 @@ class Button extends StatelessWidget {
       height: 40,
       width: width,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           colors: [Color(0xFF177f93), Color(0xFF4ec0a0)],
           begin: Alignment.centerLeft,
           end: Alignment.centerRight,
@@ -30,7 +30,7 @@ class Button extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 16,
           ),

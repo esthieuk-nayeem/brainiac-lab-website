@@ -9,7 +9,7 @@ class Footer extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Container(
-      color: Color(0xFF0b1120),
+      color: const Color(0xFF0b1120),
       height: height * .2,
       width: width,
       child: Wrap(
@@ -27,9 +27,9 @@ class Footer extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Container(
-                            height: 35, child: Image.asset("default.png")),
                         SizedBox(
+                            height: 35, child: Image.asset("default.png")),
+                        const SizedBox(
                           width: 10,
                         ),
                         Text(
@@ -43,11 +43,11 @@ class Footer extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.location_city_outlined,
                           color: Colors.white,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Text(
@@ -61,11 +61,11 @@ class Footer extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.message,
                           color: Colors.white,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Text(
@@ -79,11 +79,11 @@ class Footer extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.call,
                           color: Colors.white,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Text(
@@ -102,21 +102,21 @@ class Footer extends StatelessWidget {
                     MaterialButton(
                       onPressed: () {},
                       child:
-                          Text("Home", style: TextStyle(color: Colors.white)),
+                          const Text("Home", style: TextStyle(color: Colors.white)),
                     ),
                     MaterialButton(
                       onPressed: () {},
-                      child: Text("About Us",
+                      child: const Text("About Us",
                           style: TextStyle(color: Colors.white)),
                     ),
                     MaterialButton(
                       onPressed: () {},
-                      child: Text("Success Stories",
+                      child: const Text("Success Stories",
                           style: TextStyle(color: Colors.white)),
                     ),
                     MaterialButton(
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         "Privacy Policy",
                         style: TextStyle(color: Colors.white),
                       ),
@@ -136,25 +136,25 @@ class Footer extends StatelessWidget {
                       children: [
                         IconButton(
                             onPressed: () {},
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.facebook_outlined,
                               color: Colors.white,
                             )),
                         IconButton(
                             onPressed: () {},
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.facebook_outlined,
                               color: Colors.white,
                             )),
                         IconButton(
                             onPressed: () {},
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.facebook_outlined,
                               color: Colors.white,
                             )),
                         IconButton(
                             onPressed: () {},
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.facebook_outlined,
                               color: Colors.white,
                             ))

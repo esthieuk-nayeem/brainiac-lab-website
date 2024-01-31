@@ -11,12 +11,12 @@ class WelcomeUser extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     return Container(
-      margin: EdgeInsets.only(top: 22),
+      margin: const EdgeInsets.only(top: 22),
       height: 100,
       width: width * 0.85,
       child: Row(
         children: [
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           // CircleAvatar(
@@ -35,7 +35,7 @@ class WelcomeUser extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                     color: Colors.white),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 7,
               ),
               Text(
@@ -48,11 +48,11 @@ class WelcomeUser extends StatelessWidget {
               ),
             ],
           ),
-          Spacer(),
+          const Spacer(),
 
           if (Responsive.isDesktop(context))
-            Padding(
-              padding: const EdgeInsets.only(right: 20),
+            const Padding(
+              padding: EdgeInsets.only(right: 20),
               child: CalenderButton(),
             ),
         ],

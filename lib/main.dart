@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         initialRoute: AppPages.INITIAL,
         getPages: AppPages.routes,
         title: 'Brainiac Lab',
-        theme: ThemeData(backgroundColor: Color(0xFF0b1120)),
+        // theme: ThemeData(colorScheme: const ColorScheme(background: Color(0xFF0b1120))),
         home: const LandingPage());
   }
 }

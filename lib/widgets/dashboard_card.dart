@@ -1,13 +1,15 @@
 import 'package:brainiac_web/responsive.dart';
-import 'package:brainiac_web/widgets/courseCard.dart';
 import 'package:brainiac_web/widgets/textCard.dart';
+import 'package:brainiac_web/widgets/whyUs_Card.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DashboardCard extends StatelessWidget {
-  final String text;
 
-  DashboardCard({
-    required this.text,
+
+  const DashboardCard({super.key, 
+
+
   });
 
   @override
@@ -18,7 +20,12 @@ class DashboardCard extends StatelessWidget {
     return Container(
       // height: height * .6,
       width: width * .7,
-      color: Color(0xFF282D45).withOpacity(.07),
+      decoration: BoxDecoration(
+        color: const Color(0xFF282D45).withOpacity(.07),
+        borderRadius: BorderRadius.circular(25)
+        
+      ),
+     
       child: Stack(children: [
         Container(
           width: width * .15,
@@ -26,10 +33,10 @@ class DashboardCard extends StatelessWidget {
           decoration: BoxDecoration(
             backgroundBlendMode: BlendMode.color,
             shape: BoxShape.circle,
-            color: Color(0xFF32CAFD).withOpacity(0.01),
+            color: const Color(0xFF32CAFD).withOpacity(0.01),
             boxShadow: [
               BoxShadow(
-                color: Color(0xFF32CAFD).withOpacity(0.5),
+                color: const Color(0xFF32CAFD).withOpacity(0.5),
                 blurRadius: 250,
               ),
             ],
@@ -44,10 +51,10 @@ class DashboardCard extends StatelessWidget {
             decoration: BoxDecoration(
               backgroundBlendMode: BlendMode.color,
               shape: BoxShape.circle,
-              color: Color(0xFF32CAFD).withOpacity(0.01),
+              color: const Color(0xFF32CAFD).withOpacity(0.01),
               boxShadow: [
                 BoxShadow(
-                  color: Color(0xFF32CAFD).withOpacity(0.5),
+                  color: const Color(0xFF32CAFD).withOpacity(0.5),
                   blurRadius: 250,
                 ),
               ],
@@ -59,7 +66,7 @@ class DashboardCard extends StatelessWidget {
               top: height * .06, left: 20, right: 20, bottom: .06),
           child: SingleChildScrollView(
               child: AnimatedOpacity(
-            duration: Duration(milliseconds: 500),
+            duration: const Duration(milliseconds: 500),
             opacity: 1.0,
             child: Responsive.isDesktop(context)
                 ? Column(
@@ -67,53 +74,29 @@ class DashboardCard extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            height: height * .1,
-                            width: (width * .7) * .3,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                border: Border.all(
-                                    color: Colors.white.withOpacity(.5),
-                                    width: .5)),
-                            child: Row(
-                              children: [
-                                Padding(
-                                  padding:
-                                      EdgeInsets.only(left: (width * .5) * .02),
-                                  child: Container(
-                                    color: Colors.red,
-                                    height: (height * .1) * .6,
-                                    width: ((width * .7) * .05),
-                                    child: Center(
-                                      child: Icon(
-                                          Icons.cast_for_education_outlined),
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: (width * .5) * .02,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text("We are the best"),
-                                    Text("Provide best online class")
-                                  ],
-                                )
-                              ],
-                            ),
+
+                          WhyUsCard(height: height * .95,
+                              width: (width * .95),
+                              color: Color(0xFFDF385B),
+                              icon: Icon(Icons.abc),
+                              primaryText: "Expert Instructors",),
+
+
+                          WhyUsCard(height: height * .95,
+                              width: (width * .95),
+                              color: Color(0xFFDF385B),
+                              icon: Icon(Icons.abc),
+                              primaryText: "Interactive Learning",
+
                           ),
-                          Container(
-                            height: height * .1,
-                            width: (width * .7) * .3,
-                            color: Colors.red,
-                          ),
-                          Container(
-                            height: height * .1,
-                            width: (width * .7) * .3,
-                            color: Colors.red,
-                          ),
+
+
+                          WhyUsCard(height: height * .95,
+                              width: (width * .95),
+                              color: Color(0xFFDF385B),
+                              icon: Icon(Icons.abc),
+                              primaryText: "Progress Tracking",),
+
                         ],
                       ),
                       SizedBox(
@@ -122,26 +105,35 @@ class DashboardCard extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            height: height * .1,
-                            width: (width * .7) * .3,
-                            color: Colors.red,
-                          ),
-                          Container(
-                            height: height * .1,
-                            width: (width * .7) * .3,
-                            color: Colors.red,
-                          ),
-                          Container(
-                            height: height * .1,
-                            width: (width * .7) * .3,
-                            color: Colors.red,
-                          ),
+
+                          WhyUsCard(height: height * .95,
+                              width: (width * .95),
+                              color: Color(0xFFDF385B),
+                              icon: Icon(Icons.abc),
+                              primaryText: "Engaging Content",
+                             ),
+
+
+                          WhyUsCard(height: height * .95,
+                              width: (width * .95),
+                              color: Color(0xFFDF385B),
+                              icon: Icon(Icons.abc),
+                              primaryText: "Value & Affordability",
+                              ),
+
+
+                          WhyUsCard(height: height * .95,
+                              width: (width * .95),
+                              color: Color(0xFFDF385B),
+                              icon: Icon(Icons.abc),
+                              primaryText: "Empowering Women",
+                              ),
+
                         ],
                       ),
                     ],
                   )
-                : Wrap(
+                : const Wrap(
                     alignment: WrapAlignment.spaceBetween,
                     spacing: 15,
                     runAlignment: WrapAlignment.center,

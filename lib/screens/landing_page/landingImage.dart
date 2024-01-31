@@ -1,4 +1,3 @@
-import 'package:brainiac_web/widgets/expanCard.dart';
 import 'package:brainiac_web/widgets/smallWindowButtons.dart';
 import 'package:brainiac_web/widgets/welcomeUser.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +29,7 @@ class _LandingImageState extends State<LandingImage> {
       IntrinsicHeight(
         child: Container(
             decoration: BoxDecoration(
-                gradient: LinearGradient(
+                gradient: const LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
@@ -50,41 +49,41 @@ class _LandingImageState extends State<LandingImage> {
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: Color.fromARGB(255, 26, 151, 110).withOpacity(0.5),
+                    color: const Color.fromARGB(255, 26, 151, 110).withOpacity(0.5),
                     blurRadius: 10,
                     spreadRadius: 3,
                   ),
                 ],
-                border: Border.all(width: 0.9, color: Color(0xFF282D45))),
+                border: Border.all(width: 0.9, color: const Color(0xFF282D45))),
             width: width * 0.6,
             child: Stack(
               children: [
                 Container(
                   height: 20,
                   width: width * 0.9,
-                  color: Color(0xFF282D45).withOpacity(0.9),
+                  color: const Color(0xFF282D45).withOpacity(0.9),
                 ),
                 //  window buttons small
                 WindowButton(
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   color: Colors.redAccent.withOpacity(0.5),
                 ),
                 WindowButton(
-                  margin: EdgeInsets.only(left: 25, top: 5),
+                  margin: const EdgeInsets.only(left: 25, top: 5),
                   color: Colors.greenAccent.withOpacity(0.5),
                 ),
                 WindowButton(
-                  margin: EdgeInsets.only(left: 45, top: 5),
+                  margin: const EdgeInsets.only(left: 45, top: 5),
                   color: Colors.blueGrey.withOpacity(0.5),
                 ),
 
-                WelcomeUser(),
+                const WelcomeUser(),
                 Container(
                   padding: const EdgeInsets.only(
                     top: 100,
                   ),
                   width: width * 0.9,
-                  child: Divider(
+                  child: const Divider(
                     thickness: .5,
                     color: Colors.white,
                   ),
@@ -94,7 +93,7 @@ class _LandingImageState extends State<LandingImage> {
                       top: 130, left: 20, right: 20, bottom: 20),
                   child: SingleChildScrollView(
                       child: AnimatedOpacity(
-                    duration: Duration(seconds: 1),
+                    duration: const Duration(seconds: 1),
                     opacity: visible ? 1.0 : 0,
                     child: Wrap(
                         alignment: WrapAlignment.spaceBetween,
@@ -122,7 +121,7 @@ class _LandingImageState extends State<LandingImage> {
                             subText: "1000 taka",
                             mainText: "English For MEN",
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           )
                         ]),
@@ -135,7 +134,7 @@ class _LandingImageState extends State<LandingImage> {
   }
 
   void startOpacity() async {
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     setState(() {
       visible = true;
     });

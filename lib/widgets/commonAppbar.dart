@@ -7,7 +7,7 @@ import 'navButton.dart';
 
 class CommonAppBar extends StatefulWidget {
   Widget body;
-  CommonAppBar({required this.body});
+  CommonAppBar({super.key, required this.body});
 
   @override
   State<CommonAppBar> createState() => _CommonAppBarState();
@@ -24,15 +24,15 @@ class _CommonAppBarState extends State<CommonAppBar> {
         onPressed: () {
           Get.toNamed('/');
         }),
-    SizedBox(
+    const SizedBox(
       height: 20,
     ),
     NavbarButton(text: "Courses", onPressed: () {}),
-    SizedBox(
+    const SizedBox(
       height: 20,
     ),
     NavbarButton(text: "Success Stories", onPressed: () {}),
-    SizedBox(
+    const SizedBox(
       height: 20,
     ),
     NavbarButton(text: "Student Feedback", onPressed: () {})
@@ -47,12 +47,12 @@ class _CommonAppBarState extends State<CommonAppBar> {
         : isMobile = false;
 
     return Scaffold(
-      backgroundColor: Color(0xFF0b1120),
+      backgroundColor: const Color(0xFF0b1120),
       key: scaffoldKey,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(kToolbarHeight),
+        preferredSize: const Size.fromHeight(kToolbarHeight),
         child: Container(
-          color: Color(0xFF0b1120),
+          color: const Color(0xFF0b1120),
           child: Center(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -60,17 +60,18 @@ class _CommonAppBarState extends State<CommonAppBar> {
                 children: [
                   if (width > 400)
                     Expanded(
+                        flex: -1,
                         child: GestureDetector(
                           onTap: () {
                             Get.toNamed('/');
                           },
                           child: Row(
                             children: [
-                              Container(
+                              const SizedBox(
                                   height: 35,
                                   child: Image(
                                       image: AssetImage("assets/default.png"))),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
                               Text(
@@ -82,11 +83,10 @@ class _CommonAppBarState extends State<CommonAppBar> {
                               )
                             ],
                           ),
-                        ),
-                        flex: -1),
-                  Spacer(),
+                        )),
+                  const Spacer(),
                   if (!isMobile) ...listItems,
-                  Spacer(),
+                  const Spacer(),
                   !isMobile
                       ? Button(
                           text: "Login",
@@ -97,7 +97,7 @@ class _CommonAppBarState extends State<CommonAppBar> {
                             print("Cross pressed");
                             scaffoldKey.currentState?.openEndDrawer();
                           },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.menu,
                             color: Colors.white,
                           )),
@@ -113,7 +113,7 @@ class _CommonAppBarState extends State<CommonAppBar> {
               child: Container(
                 height: MediaQuery.of(context).size.height * .5,
                 width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(color: Color(0xFF0b1120)),
+                decoration: const BoxDecoration(color: Color(0xFF0b1120)),
                 child: Stack(children: [
                   Center(
                     child: Column(
@@ -129,7 +129,7 @@ class _CommonAppBarState extends State<CommonAppBar> {
                           print("Cross pressed");
                           scaffoldKey.currentState?.closeEndDrawer();
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.close,
                           color: Colors.white,
                         )),

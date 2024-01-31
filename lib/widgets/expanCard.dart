@@ -26,25 +26,25 @@ class _ExpanCardState extends State<ExpanCard> {
       },
       child: AnimatedContainer(
         curve: Curves.easeInToLinear,
-        duration: Duration(microseconds: 200),
+        duration: const Duration(microseconds: 200),
         transform: transform,
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: Color(0xFF060B27),
+            color: const Color(0xFF060B27),
           ),
           child: Container(
-            padding: EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(left: 20),
             height: 130,
             width: width * 0.9,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
                 Row(
@@ -56,10 +56,10 @@ class _ExpanCardState extends State<ExpanCard> {
                           color: Colors.white,
                           fontSize: 12),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
-                    Container(
+                    const SizedBox(
                       height: 16,
                       width: 30,
                       child: Chip(
@@ -72,7 +72,7 @@ class _ExpanCardState extends State<ExpanCard> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text(

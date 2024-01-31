@@ -3,18 +3,18 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ReviewCard extends StatelessWidget {
   final index;
-  ReviewCard({this.index});
+  const ReviewCard({super.key, this.index});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Padding(
-          padding: EdgeInsets.only(top: 150),
+          padding: const EdgeInsets.only(top: 150),
           child: Container(
             width: 392,
             height: 110,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 gradient: LinearGradient(colors: [
               Color(0xFFA64CE8),
               Color(0xFFA8E9ff),
@@ -27,19 +27,19 @@ class ReviewCard extends StatelessWidget {
           child: Container(
             height: 235,
             width: 343,
-            color: Color(0xFF0E1330),
+            color: const Color(0xFF0E1330),
             child: Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.calendar_month,
                       color: Colors.white,
                       size: 30,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Text(
@@ -53,7 +53,7 @@ class ReviewCard extends StatelessWidget {
                   ],
                 ),
                 Container(
-                  padding: EdgeInsets.only(left: 15, right: 15, top: 10),
+                  padding: const EdgeInsets.only(left: 15, right: 15, top: 10),
                   child: Text(
                     "প্রথম মাসে একদম IELTS এর বেসিক থেকে শেখানো হবে। যারা একদম ই তেমন একটা প্রেপারেশন নেন নি কখনো তারা একদম বেসিক থেকে শিখতে পারবেন। সাথে থাকবে রেগুলার এসাইনমেন্টে। ",
                     textAlign: TextAlign.start,

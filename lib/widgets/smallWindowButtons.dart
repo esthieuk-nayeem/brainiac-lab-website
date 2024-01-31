@@ -4,7 +4,7 @@ class WindowButton extends StatelessWidget {
   final margin;
   final color;
 
-  WindowButton({this.margin, this.color});
+  const WindowButton({super.key, this.margin, this.color});
 
   @override
   Widget build(BuildContext context) {
